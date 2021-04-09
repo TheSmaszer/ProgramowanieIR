@@ -23,7 +23,7 @@ if(alpha<0 or alpha>np.pi/2 or v0<0 or mass<=0 or beta<=0 or offset<0):
 height = (beta*offset + (1/2)*mass*np.log(1 + (beta*(v0**2)*(np.sin(alpha)**2))/(g*mass)))/beta
 period = max((np.sqrt(mass)*(np.arccosh(np.e**((2*beta*offset + mass*np.log(1 + (beta*(v0**2)*(np.sin(alpha)**2))/(g*mass)))/(2*mass))) + np.arctan((np.sqrt(beta)*v0*np.sin(alpha))/(np.sqrt(g*mass)))))/(np.sqrt(beta*g)),(np.sqrt(mass)*(-np.arccosh(np.e**((2*beta*offset + mass*np.log(1 + (beta*(v0**2)*(np.sin(alpha)**2))/(g*mass)))/(2*mass))) + np.arctan((np.sqrt(beta)*v0*np.sin(alpha))/(np.sqrt(g*mass)))))/(np.sqrt(beta*g)))
 distance = -((mass*np.log(mass))/beta) + (mass*np.log(mass + beta*period*v0*np.cos(alpha)))/beta
-print("###########################################")
+print("\n#############Calculated values#############")
 print(f"Total height:{round(height,3)}")
 print(f"Total time:{round(period,2)}")
 print(f"Total distance:{round(distance,3)}")
